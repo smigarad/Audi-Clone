@@ -1,0 +1,318 @@
+@font-face {
+    font-family: audi-normal;
+    src: url("resources/fonts/AudiType-Normal_03.ttf");
+}
+
+@font-face {
+    font-family: audi-bold;
+    src: url("resources/fonts/AudiType-Bold_03.ttf");
+}
+
+@keyframes animate {
+    0% {
+        width: 2%;
+        left: 0;
+    }
+    100% {
+        width: 100%; /* Zmenší šířku čáry zpět na původních 2% */
+        left: 0; /* Posune čáru doprava o 100% */
+    }
+}
+
+@keyframes animateFade {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+html {
+    font-family: audi-normal;
+    font-size: 16px;
+
+}
+
+#navbar {
+    border: 1px solid black;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+
+}
+
+.inner_navbar_content {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid red;
+    align-items: center;
+}
+
+.logo_audi {
+    width: 100px;
+    height: 60px;
+    border: 1px solid red;
+}
+
+.navbar_button:hover {
+    opacity: 1;
+    cursor: pointer;
+
+
+}
+
+.navbar_button {
+    position: relative;
+    border: 0px;
+    font-size: 17px;
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 1px solid red;
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+.navbar_button .line-linear {
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    border: 1px solid red;
+}
+
+.navbar_button:hover .line-linear::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    animation: animate 0.7s linear  forwards;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    margin-left: 15%;
+    /*center all items*/
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border: 1px solid red;
+    font-size: 20px;
+
+}
+
+.search-icon {
+    width: 24px; /* Set the width and height of the icon */
+    height: 24px;
+    fill: currentColor; /* Use the current text color as the fill color */
+
+}
+
+.search-button:hover .search-icon {
+    fill: #4CAF50; /* Change the fill color on hover */
+
+}
+
+.flag {
+    width: 30px;
+    height: 30px;
+    border: 1px solid red;
+    margin-left: 5%;
+    margin-right: 5%;
+    /* i want a circle */
+    border-radius: 50%;
+}
+
+.country-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    border: 1px solid red;
+    margin-left: 5%;
+}
+
+.footbal-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container{
+    position: relative;
+    overflow: hidden;
+    border: 1px solid red;
+}
+.footbal-image{
+    width: 100%; /* Set the image width to 100% of the container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 1s;
+    filter: brightness(70%);
+}
+.footbal-image:hover{
+    transform: scale(1.2);
+    filter: blur(0.5px);
+    filter: brightness(55%);
+}
+.footbal-text{
+    text-align: center;
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    border: 1px solid red;
+    color: white; /* Text color */
+}
+.footbal-text h1{
+    font-size: 5.0rem;
+
+}
+.footbal-text h3{
+    font-size: 1.5rem;
+}
+.footbal-button{
+    border: 1px solid white;
+    background: none;
+    color: white;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 50px;
+    text-decoration: none;
+}
+.footbal-button:hover{
+   cursor: pointer;
+    filter: brightness(70%);
+    transition: transform 1s;
+}
+.footbal-image{
+    
+}
+.footbal-description{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.7rem;
+
+    border: 1px solid red;
+}
+.footbal-description div{
+    margin-bottom:0.3%;
+}
+
+.space-div{
+    height: 96px;
+    border: 1px solid red;
+}
+
+.headline-centered-div{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid red;
+    padding: 0 4%;
+}
+.headline-centered-div h2{
+    font-size: 3.0rem;
+    line-height: 0.1rem;
+}
+
+.topics-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+    flex-wrap: wrap;
+    margin: 0 10%;
+    box-sizing: content-box;
+    justify-content: space-between;
+}
+
+.topic{
+
+    overflow: hidden;
+
+}
+.topic:hover img{
+    transform: scale(1.2);
+    filter: blur(0.5px);
+    filter: brightness(55%);
+    transition: 1s;
+}
+.topic-image{
+    width: 476px;
+    height: 262px;
+    border: 1px solid red;
+    object-fit: cover;
+    transform(scale(1.1))
+}
+
+.article{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: 0 10%;
+    justify-content: space-between;
+    border: 1px solid red;
+}
+.article-text{
+    width: 48%;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+.article-text h3{
+    font-size: 1.5rem;
+    margin-bottom: 0.5%;
+    font-weight: 400;
+    font-style: normal;
+}
+.article-text p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 4%;
+    font-weight: 400;
+    font-style: normal;
+}
+.article-text a {
+    text-align: center;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 2%;
+    font-weight: 400;
+    font-style: normal;
+
+    margin-left: 10%;
+    border: 1px solid black;
+    background: none;
+    color: black;
+    width: 20%;
+    height: 50px;
+    text-decoration: none;
+
+}
+.article-picture{
+    max-width: 48%;
+}
+
+
+/*@media only screen and(max-width: 576px) {}*/
