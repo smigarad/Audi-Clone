@@ -166,7 +166,7 @@ html {
     transition: transform 1s;
     filter: brightness(70%);
 }
-.footbal-image:hover{
+.footbal-container:hover img{
     transform: scale(1.2);
     filter: blur(0.5px);
     filter: brightness(55%);
@@ -205,7 +205,7 @@ html {
     transition: transform 1s;
 }
 .footbal-image{
-    
+
 }
 .footbal-description{
     display: flex;
@@ -242,7 +242,7 @@ html {
     flex-direction: row;
     border: 1px solid red;
     flex-wrap: wrap;
-    margin: 0 10%;
+    margin: 0 15%;
     box-sizing: content-box;
     justify-content: space-between;
 }
@@ -250,6 +250,11 @@ html {
 .topic{
 
     overflow: hidden;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    max-width: 31%;
+
 
 }
 .topic:hover img{
@@ -258,25 +263,42 @@ html {
     filter: brightness(55%);
     transition: 1s;
 }
+
 .topic-image{
-    width: 476px;
+    width: 100%;
     height: 262px;
     border: 1px solid red;
     object-fit: cover;
     transform(scale(1.1))
 }
 
+.topic-text{
+    overflow: hidden;
+}
+topic-picture-description{
+
+}
+.topic-picture-description span{
+    font-size: 0.7rem;
+}
+
+.topic a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+
+}
 .article{
     position: relative;
     display: flex;
     flex-direction: row;
-    margin: 0 10%;
+    margin: 0 15%;
     justify-content: space-between;
     border: 1px solid red;
 }
 .article-text{
     width: 48%;
-    border: 1px solid red;
+    border: 1px solid green;
     display: flex;
     flex-direction: column;
 }
@@ -295,12 +317,9 @@ html {
 }
 .article-text a {
     text-align: center;
-    display: block;
     font-size: 1rem;
-    margin-bottom: 2%;
     font-weight: 400;
     font-style: normal;
-
     margin-left: 10%;
     border: 1px solid black;
     background: none;
@@ -310,9 +329,151 @@ html {
     text-decoration: none;
 
 }
+
+
+.article-footer{
+    line-height: 0.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.article-footer span{
+    font-size: 0.7rem;
+
+}
+.article-button{
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 50px;
+    border: 1px solid red;
+}
+
+.article-button a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .article-picture{
     max-width: 48%;
 }
 
+.audi-center-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid black;
+}
+.audi-center-button a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 2%;
+}
+.audi-center-button a:hover{
+    opacity: 0.8;
+}
 
+.footer{
+    background-color: black;
+    color: white;
+}
+.footer-center{
+    margin: 0 15%;
+    display: flex;
+    flex-direction: column;
+
+}
+.social-footer{
+    display: flex;
+    margin-top: 5%;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: 1px solid red;
+    gap: 2%;
+}
+
+.columns-footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.column-container{
+    width: 25%;
+}
+
+.column-container ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+.footer-center li{
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10%;
+
+}
+.footer-center a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.footer-center li:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity .3s ease-in-out;
+}
+
+.copyright-footer{
+    border-top: white 1px solid;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-between;*/
+    margin: 5% 0%;
+}
+
+.copyright-footer li{
+    display: inline;
+    border: 1px solid red;
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+.copyright-footer ul{
+    margin-right: 10%;
+}
+.globe-section{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    border: 1px solid red;
+}
+.language-button{
+    background: none;
+    border: 1px solid red;
+    color: white;
+    font-size: 1.2rem;
+
+
+}
+.language-button:hover{
+    cursor: pointer;
+}
+.text-info{
+    font-size: 0.8rem;
+}
 /*@media only screen and(max-width: 576px) {}*/
