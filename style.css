@@ -32,7 +32,7 @@
 html {
     font-family: audi-normal;
     font-size: 16px;
-
+    box-sizing: border-box;
 }
 
 #navbar {
@@ -40,24 +40,92 @@ html {
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 1;
+    z-index: 3;
     width: 100%;
 
 }
 
 .inner_navbar_content {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-left: 15%;
     margin-right: 15%;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
+}
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with low opacity */
+    z-index: 2; /* Ensures it's on top of everything */
+    cursor: pointer;
+}
+.navbar-normal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /*border: 1px solid red;*/
     align-items: center;
+}
+.collapsable-navbar{
+    display: none;
+}
+
+#sport-links, #sustainability-links, #company-links,#careers-links,#innovation-links{
+    display: none;
+    flex-direction: row;
+    gap: 5%;
+
+    border: 1px solid red;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 21%;
+}
+#sport-links li, #sustainability-links li, #company-links li,#careers-links li,#innovation-links li{
+    text-decoration: none;
+    list-style-type: none;
+    border: 1px solid red;
+    position: relative;
+}
+#sport-links li a, #sustainability-links li a,  #company-links li a,#careers-links li a,#innovation-links li a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    opacity: 0.7;
+    font-style: normal;
+    font-size: 1rem;
+
+}
+#sport-links li:hover a, #sustainability-links li:hover a,  #company-links li:hover a,#careers-links li:hover a,#innovation-links li:hover a{
+    opacity: 1;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+#collapsable-links .line-linear {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    /*border: 1px solid red;*/
+}
+
+#collapsable-links li:hover .line-linear::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    animation: animate 0.7s linear  forwards;
 }
 
 .logo_audi {
     width: 100px;
     height: 60px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .navbar_button:hover {
@@ -69,12 +137,13 @@ html {
 
 .navbar_button {
     position: relative;
+
     border: 0px;
     font-size: 17px;
     background-color: white;
     margin-left: 2%;
     margin-right: 2%;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     opacity: 0.7;
     transition: 0.3s ease;
 }
@@ -83,7 +152,7 @@ html {
     position: absolute;
     width: 80%;
     height: 3px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .navbar_button:hover .line-linear::before {
@@ -98,7 +167,7 @@ html {
 .search-container {
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     margin-left: 15%;
     /*center all items*/
     align-items: center;
@@ -114,8 +183,13 @@ html {
     background: none;
     border: none;
     cursor: pointer;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     font-size: 20px;
+    display: flex;
+    align-items: center;
+/*    5PX between the items in flex*/
+    gap: 5px;
+
 
 }
 
@@ -134,7 +208,7 @@ html {
 .flag {
     width: 30px;
     height: 30px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     margin-left: 5%;
     margin-right: 5%;
     /* i want a circle */
@@ -145,7 +219,7 @@ html {
     background: none;
     border: none;
     cursor: pointer;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     margin-left: 5%;
 }
 
@@ -158,7 +232,7 @@ html {
 .image-container{
     position: relative;
     overflow: hidden;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .footbal-image{
     width: 100%; /* Set the image width to 100% of the container */
@@ -178,7 +252,7 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     color: white; /* Text color */
 }
 .footbal-text h1{
@@ -199,6 +273,15 @@ html {
     height: 50px;
     text-decoration: none;
 }
+
+.footbal-description-h3{
+/*    hide it*/
+    display: none;
+
+}
+.footbal-description .footbal-button{
+    display: none;
+}
 .footbal-button:hover{
    cursor: pointer;
     filter: brightness(70%);
@@ -213,7 +296,7 @@ html {
     flex-direction: column;
     font-size: 0.7rem;
 
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .footbal-description div{
     margin-bottom:0.3%;
@@ -221,14 +304,14 @@ html {
 
 .space-div{
     height: 96px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .headline-centered-div{
     position: relative;
     margin: 0 auto;
     text-align: center;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     padding: 0 4%;
 }
 .headline-centered-div h2{
@@ -240,17 +323,19 @@ html {
     position: relative;
     display: flex;
     flex-direction: row;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     flex-wrap: wrap;
-    margin: 0 15%;
-    box-sizing: content-box;
+    margin: 0 auto;
+    /*padding: 0 0%;*/
+
     justify-content: space-between;
+    max-width: 1440px;
 }
 
 .topic{
 
     overflow: hidden;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     display: flex;
     flex-direction: column;
     max-width: 31%;
@@ -267,7 +352,7 @@ html {
 .topic-image{
     width: 100%;
     height: 262px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     object-fit: cover;
     transform(scale(1.1))
 }
@@ -292,13 +377,14 @@ topic-picture-description{
     position: relative;
     display: flex;
     flex-direction: row;
-    margin: 0 15%;
+    margin: 0 auto;
+    max-width: 1440px;
     justify-content: space-between;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .article-text{
     width: 48%;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
     display: flex;
     flex-direction: column;
 }
@@ -346,7 +432,7 @@ topic-picture-description{
     flex-direction: row;
     width: 30%;
     height: 50px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 .article-button a{
@@ -365,7 +451,7 @@ topic-picture-description{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 .audi-center-button a{
     text-decoration: none;
@@ -387,7 +473,9 @@ topic-picture-description{
     color: white;
 }
 .footer-center{
-    margin: 0 15%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4%;
     display: flex;
     flex-direction: column;
 
@@ -397,7 +485,7 @@ topic-picture-description{
     margin-top: 5%;
     flex-direction: row;
     justify-content: flex-end;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     gap: 2%;
 }
 
@@ -448,7 +536,7 @@ topic-picture-description{
 
 .copyright-footer li{
     display: inline;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     font-size: 0.8rem;
     margin-left: 10px;
 }
@@ -460,11 +548,11 @@ topic-picture-description{
     display: flex;
     align-self: center;
     align-items: center;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .language-button{
     background: none;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     color: white;
     font-size: 1.2rem;
 
@@ -476,4 +564,106 @@ topic-picture-description{
 .text-info{
     font-size: 0.8rem;
 }
-/*@media only screen and(max-width: 576px) {}*/
+@media only screen and (max-width: 1439px) {
+    .inner_navbar_content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .search-container{
+        margin-left: 0;
+    }
+    .search-button{
+
+        font-size: 0;
+    }
+    .navbar_button{
+        display: none;
+    }
+    .collapsable-navbar{
+        display: block;
+    }
+    .footbal-text h1{
+        font-size: 4rem;
+    }
+
+    .footbal-text h3{
+        display: none;
+    }
+    .footbal-button{
+        display: none;
+    }
+    .headline-centered-div h2{
+        font-size: 2.3rem;
+
+    }
+
+    .footbal-description-h3{
+    /*   show it*/
+        display: block;
+
+    }
+    .footbal-description .footbal-button{
+        display: block;
+        color: black;
+        border: 1px solid black;
+        background: none;
+        padding: 1px 40px;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2.7rem;
+        text-decoration: none;
+        margin-bottom: 2%;
+    }
+    .footbal-description .footbal-button:hover{
+        cursor: pointer;
+        filter: brightness(70%);
+        transition: transform 1s;
+    }
+    .footbal-text{
+        top: 33%;
+    }
+}
+
+@media only screen and (max-width: 1024px){
+    .article{
+        flex-direction: column;
+    }
+    .article-text{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .article-picture{
+        max-width: 100%;
+    }
+    .footbal-text{
+        top: 29%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .footbal-spans{
+
+    }
+    .footbal-text h1{
+        font-size: 1.5rem;
+    }
+    .headline-centered-div h2{
+        font-size: 1.6rem;
+    }
+    .topics-container{
+        flex-direction: column;
+    }
+    .topic{
+        max-width: 100%;
+        margin-bottom: 5%;
+    }
+}
+
+@media only screen and (max-width: 479px){
+    .footbal-image{
+
+    }
+}

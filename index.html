@@ -12,49 +12,185 @@
 <script src="script.js"></script>
 <nav id="navbar">
     <div class="inner_navbar_content">
-        <img class="logo_audi" src="resources/images/audi-1-logo.png" alt="audi-logo">
-        <button class="navbar_button">Company
-            <div class="line-linear"></div>
-        </button>
-        <button class="navbar_button">Innovation
-            <div class="line-linear"></div>
-        </button>
-        <button class="navbar_button">Sustainability
-            <div class="line-linear"></div>
-        </button>
-        <button class="navbar_button">Careers
-            <div class="line-linear"></div>
-        </button>
-        <button class="navbar_button">Audi in sport
-            <div class="line-linear"></div>
-        </button>
-
-
-        <div class="search-container">
-            <div class="search-bar">
-                <button class="search-button">
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M22,22 L13.7,13.7 L22,22 Z M15.5,9 C15.6,12.5 12.9,15.4 9.4,15.5 C9.3,15.5 9.1,15.5 9,15.5
-                                C5.4,15.5 2.5,12.6 2.5,9 C2.5,5.4 5.4,2.5 9,2.5 C12.6,2.5 15.5,5.4 15.5,9 C15.5,9 15.5,9 15.5,9 Z"
-                              stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <button class="search-button">Search</button>
+        <div class = "navbar-normal">
+            <div class="collapsable-navbar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor" class="bi bi-list"
+                     viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
             </div>
-            <p>|</p>
-            <div class="country-container">
-                <button class="country-button">
-                    <img class="flag" src="resources/images/Flag_of_the_Czech_Republic.png">
-                </button>
-                <div class="country-dropdown">
+            <img class="logo_audi" src="resources/images/audi-1-logo.png" alt="audi-logo">
+            <button class="navbar_button" onclick="toogleContent('company-links')">Company
+                <div class="line-linear">
+                </div>
+            </button>
+            <button class="navbar_button" onclick="toogleContent('innovation-links')">Innovation
+                <div class="line-linear"></div>
+            </button>
+            <button class="navbar_button" onclick="toogleContent('sustainability-links')">Sustainability
+                <div class="line-linear"></div>
+            </button>
+            <button class="navbar_button" onclick="toogleContent('careers-links')">Careers
+                <div class="line-linear"></div>
+            </button>
+            <button class="navbar_button"onclick="toogleContent('sport-links')">Audi in sport
+                <div class="line-linear"></div>
+            </button>
+
+
+            <div class="search-container">
+                <div class="search-bar">
+                    <button class="search-button">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M22,22 L13.7,13.7 L22,22 Z M15.5,9 C15.6,12.5 12.9,15.4 9.4,15.5 C9.3,15.5 9.1,15.5 9,15.5
+                                C5.4,15.5 2.5,12.6 2.5,9 C2.5,5.4 5.4,2.5 9,2.5 C12.6,2.5 15.5,5.4 15.5,9 C15.5,9 15.5,9 15.5,9 Z"
+                                  stroke="currentColor" stroke-width="1" fill="none" fill-rule="evenodd"></path>
+                        </svg>
+                        Search
+                    </button>
+                </div>
+                <p>|</p>
+                <div class="country-container">
+                    <button class="country-button">
+                        <img class="flag" src="resources/images/Flag_of_the_Czech_Republic.png">
+                    </button>
+                    <div class="country-dropdown">
+                    </div>
                 </div>
             </div>
-
         </div>
+
+    </div>
+    <div id="collapsable-links">
+        <ul class="links" id = "company-links">
+            <li>
+                <a href="https://www.audi.com/en/company.html">Company</a>
+                <div class="line-linear"></div>
+            </li>
+
+            <li>
+                <a href="https://www.audi.com/en/company/strategy.html">Strategy</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href="https://www.audi.com/en/company/profile.html">Profile</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href="https://www.audi.com/en/company/investor-relations.html">Investor relations</a>
+                <div class="line-linear"></div>
+            </li>
+
+            <li>
+                <a href="https://www.audi.com/en/company/compliance-riskmanagement.html">Compliance & risk
+                    management</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href="https://www.audi.com/en/company/press-media.html">Press media</a>
+                <div class="line-linear"></div>
+            </li>
+        </ul>
+
+        <ul id = "innovation-links" class = "links">
+            <li>
+                <a href = "https://www.audi.com/en/innovation.html">Innovation</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/innovation/product-innovation.html">Product innovation</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/innovation/future-technology.html">Future technology</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/innovation/digitalization.html">Digitalization</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/innovation/research.html">Research</a>
+                <div class="line-linear"></div>
+            </li>
+        </ul>
+
+        <ul id = "sustainability-links" class = "links">
+            <li>
+                <a href = "https://www.audi.com/en/sustainablility.html">Sustainability</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/sustainablility/sustainablity-concept.html">Sustainability concept</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/sustainablility/environment-resources.html">Environment resources</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/sustainablility/people-society.html">People society</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/sustainablility/ethical-leadership.html">Ethical leadership</a>
+                <div class="line-linear"></div>
+            </li>
+        </ul>
+
+        <ul id = "careers-links" class = "links">
+            <li>
+                <a href = "https://www.audi.com/en/careers.html">Overview</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://karriere.audi.de/sap/bc/bsp/sap/z_hcmx_ui_ext/desktop.html#/SEARCH/SIMPLE/?pid=bc:jobportal22_EN:audi.com:karriere.audi:navigation:y:jobportal">Job portal</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/careers/working-at-audi.html">Working at Audi</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/careers/pupils.html">School students</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/careers/students.html">Students</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/careers/graduates.html">Graduates</a>
+                <div class="line-linear"></div>
+
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/careers/professionals.html">Professionals</a>
+                <div class="line-linear"></div>
+            </li>
+        </ul>
+
+        <ul id = "sport-links" class = "links">
+            <li>
+                <a href = "https://www.audi.com/en/careers.html">Overview</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://karriere.audi.de/sap/bc/bsp/sap/z_hcmx_ui_ext/desktop.html#/SEARCH/SIMPLE/?pid=bc:jobportal22_EN:audi.com:karriere.audi:navigation:y:jobportal">Vorsprung durch Motorsport</a>
+                <div class="line-linear"></div>
+            </li>
+            <li>
+                <a href = "https://www.audi.com/en/careers/working-at-audi.html">Footbal partnership</a>
+                <div class="line-linear"></div>
+            </li>
+        </ul>
+
     </div>
 </nav>
 
-<div class="main-container">
+<div id = "overlay"></div>
+<div id="main-container">
 
     <div class="footbal-container">
         <div class="image-container">
@@ -67,7 +203,11 @@
                href="https://www.audi.com/en/careers/working-at-audi/audi-spirit/women-in-tech.html">Read more</a>
         </div>
         <div class="footbal-description">
-            <div>
+            <h3 class="footbal-description-h3">Join our team as they take the Audi RS e-tron GT FC Bayern concept* for a
+                spin</h3>
+            <a class="footbal-button"
+               href="https://www.audi.com/en/careers/working-at-audi/audi-spirit/women-in-tech.html">Read more</a>
+            <div class="footbal-spans">
                 <span>Audi RS e-tron GT FC Bayern concept: </span>
                 <span>Power consumption (combined*) in kWh/100 km: 20.2–19.3 (NEDC) | 22.6–20.6 (WLTP)</span>
                 <span>CO₂ emissions (combined*) in g/km: 0</span>
@@ -318,9 +458,9 @@
                     <li>
                         <a href="https://www.audi.com/en/company/profile/brand.html">Brand</a>
                     </li>
-                <li>
-                    <a href="https://www.audi.com/en/careers.html">Careers</a>
-                </li>
+                    <li>
+                        <a href="https://www.audi.com/en/careers.html">Careers</a>
+                    </li>
                 </ul>
             </div>
 
@@ -328,13 +468,16 @@
                 <h3>AUDI AG</h3>
                 <ul>
                     <li>
-                        <a href="https://www.audi.com/en/sustainablility/sustainablity-concept/sustainability-reports/report-2022.html">Audi report 2022</a>
+                        <a href="https://www.audi.com/en/sustainablility/sustainablity-concept/sustainability-reports/report-2022.html">Audi
+                            report 2022</a>
                     </li>
                     <li>
-                        <a href="https://www.audi.com/en/sustainablility/ethical-leadership/documents-policies.html">Documents and policies</a>
+                        <a href="https://www.audi.com/en/sustainablility/ethical-leadership/documents-policies.html">Documents
+                            and policies</a>
                     </li>
                     <li>
-                        <a href="https://www.audi.com/en/company/investor-relations/financial-calendar.html">Financial calendars</a>
+                        <a href="https://www.audi.com/en/company/investor-relations/financial-calendar.html">Financial
+                            calendars</a>
                     </li>
                     <li>
                         <a href="https://www.audi.com/en/company/profile.html">Profile</a>
@@ -359,47 +502,65 @@
                     </li>
 
                     <li>
-                        <a href="https://karriere.audi.de/sap/bc/bsp/sap/z_hcmx_ui_ext/desktop.html#/SEARCH/SIMPLE/?pid=bc:jobportal22_EN:audi.com:karriere.audi:navigation:y:jobportal">Job portal</a>
+                        <a href="https://karriere.audi.de/sap/bc/bsp/sap/z_hcmx_ui_ext/desktop.html#/SEARCH/SIMPLE/?pid=bc:jobportal22_EN:audi.com:karriere.audi:navigation:y:jobportal">Job
+                            portal</a>
                     </li>
                 </ul>
             </div>
         </div>
 
-        <div class = "copyright-footer">
+        <div class="copyright-footer">
             <p>© AUDI AG. All rights reserved</p>
             <ul>
                 <li>
-                    <a href = "">Legal notice</a>
+                    <a href="">Legal notice</a>
                 </li>
                 <li>
-                    <a href = "">Legal</a>
+                    <a href="">Legal</a>
                 </li>
                 <li>
-                    <a href = "">Whistleblower System</a>
+                    <a href="">Whistleblower System</a>
                 </li>
                 <li>
-                    <a href = ""> Privacy Policy</a>
+                    <a href=""> Privacy Policy</a>
                 </li>
                 <li>
-                    <a href = "">Cookie Policy</a>
+                    <a href="">Cookie Policy</a>
                 </li>
                 <li>
-                    <a href = "">Cookie Consent Options</a>
+                    <a href="">Cookie Consent Options</a>
                 </li>
             </ul>
             <div class="globe-section">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-globe" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-globe"
+                     viewBox="0 0 16 16">
                     <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
                 </svg>
-                <button class = "language-button">English</button>
+                <button class="language-button">English</button>
 
             </div>
         </div>
-        <div class="text-info"><p>* The stated consumption and emissions values were determined in accordance with the legally stipulated measurement procedure. The WLTP test cycle completely replaced the NEDC test cycle with effect from 1 January 2022. As a result, no NEDC values are available for vehicles with a type approval issued after this date.</p>
-            <p>The values do not refer to an individual vehicle and are not part of the offer; instead, they are solely for the purpose of comparing between different types of vehicles. Optional equipment and accessories (attachments, tyre formats etc.) may alter relevant vehicle parameters such as the weight, rolling resistance and aerodynamics and, alongside weather and traffic conditions and individual driving behaviour, may influence the fuel consumption, electricity consumption,&nbsp;CO₂ emissions and performance values of a vehicle.</p>
-            <p>Due to the more realistic test conditions, fuel consumption and CO₂ emissions values will in many cases be higher in accordance with the WLTP than in accordance with the NEDC. There may have been corresponding changes to vehicle taxation since 1 September 2018 as a result of this. You can find further information on the differences between the WLTP and the NEDC at <a href="http://www.audi.co.uk/wltp" target="_blank">http://www.audi.co.uk/wltp</a>.</p>
+        <div class="text-info"><p>* The stated consumption and emissions values were determined in accordance with the
+            legally stipulated measurement procedure. The WLTP test cycle completely replaced the NEDC test cycle with
+            effect from 1 January 2022. As a result, no NEDC values are available for vehicles with a type approval
+            issued after this date.</p>
+            <p>The values do not refer to an individual vehicle and are not part of the offer; instead, they are solely
+                for the purpose of comparing between different types of vehicles. Optional equipment and accessories
+                (attachments, tyre formats etc.) may alter relevant vehicle parameters such as the weight, rolling
+                resistance and aerodynamics and, alongside weather and traffic conditions and individual driving
+                behaviour, may influence the fuel consumption, electricity consumption,&nbsp;CO₂ emissions and
+                performance values of a vehicle.</p>
+            <p>Due to the more realistic test conditions, fuel consumption and CO₂ emissions values will in many cases
+                be higher in accordance with the WLTP than in accordance with the NEDC. There may have been
+                corresponding changes to vehicle taxation since 1 September 2018 as a result of this. You can find
+                further information on the differences between the WLTP and the NEDC at <a
+                        href="http://www.audi.co.uk/wltp" target="_blank">http://www.audi.co.uk/wltp</a>.</p>
             <p>&nbsp;</p>
-            <p>Further information on the official fuel consumption and the official, specific&nbsp;CO₂ emissions of new passenger car models can be found in the “Guide on the fuel economy,&nbsp;CO₂ emissions and power consumption of all new passenger car models”, available free of charge from all sales outlets and from DAT Deutsche Automobil Treuhand GmbH, Hellmuth-Hirth-Str. 1, 73760 Ostfildern, Germany or at <a href="http://www.dat.de" target="_blank">www.dat.de</a>.</p>
+            <p>Further information on the official fuel consumption and the official, specific&nbsp;CO₂ emissions of new
+                passenger car models can be found in the “Guide on the fuel economy,&nbsp;CO₂ emissions and power
+                consumption of all new passenger car models”, available free of charge from all sales outlets and from
+                DAT Deutsche Automobil Treuhand GmbH, Hellmuth-Hirth-Str. 1, 73760 Ostfildern, Germany or at <a
+                        href="http://www.dat.de" target="_blank">www.dat.de</a>.</p>
         </div>
     </div>
 </footer>
