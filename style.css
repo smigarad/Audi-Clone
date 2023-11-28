@@ -134,7 +134,6 @@ html {
 
 
 }
-
 .navbar_button {
     position: relative;
 
@@ -164,6 +163,16 @@ html {
     animation: animate 0.7s linear  forwards;
 }
 
+.navbar-collabsible-button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
 .search-container {
     display: flex;
     flex-direction: row;
@@ -187,7 +196,7 @@ html {
     font-size: 20px;
     display: flex;
     align-items: center;
-/*    5PX between the items in flex*/
+    /*    5PX between the items in flex*/
     gap: 5px;
 
 
@@ -275,7 +284,7 @@ html {
 }
 
 .footbal-description-h3{
-/*    hide it*/
+    /*    hide it*/
     display: none;
 
 }
@@ -283,7 +292,7 @@ html {
     display: none;
 }
 .footbal-button:hover{
-   cursor: pointer;
+    cursor: pointer;
     filter: brightness(70%);
     transition: transform 1s;
 }
@@ -354,7 +363,7 @@ html {
     height: 262px;
     /*border: 1px solid red;*/
     object-fit: cover;
-    transform(scale(1.1))
+transform(scale(1.1))
 }
 
 .topic-text{
@@ -581,12 +590,23 @@ topic-picture-description{
     }
     .navbar_button{
         display: none;
+        margin-top: 1%;
+        margin-bottom: 1%;
     }
     .collapsable-navbar{
         display: block;
     }
-    .footbal-text h1{
-        font-size: 4rem;
+    #medium-subnav{
+        /*display: none;*/
+        flex-direction: row;
+    }
+    #collapsable-links{
+    /*    background color white, but less white*/
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+    #sport-links, #sustainability-links, #company-links, #careers-links, #innovation-links {
+        margin-left: 0;
+        gap: 2%
     }
 
     .footbal-text h3{
@@ -601,7 +621,7 @@ topic-picture-description{
     }
 
     .footbal-description-h3{
-    /*   show it*/
+        /*   show it*/
         display: block;
 
     }
@@ -627,7 +647,67 @@ topic-picture-description{
     }
 }
 
+#company-links-mobile, #careers-links-mobile, #innovation-links-mobile,#sport-links-mobile, #sustainability-links-mobile{
+    display: none;
+    flex-direction: column;
+    gap: 5%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 1px solid red;
+}
+#company-links-mobile li, #careers-links-mobile li, #innovation-links-mobile li,#sport-links-mobile li, #sustainability-links-mobile li{
+    text-decoration: none;
+    list-style-type: none;
+    border: 1px solid red;
+    position: relative;
+}
+#company-links-mobile li a, #careers-links-mobile li a, #innovation-links-mobile li a,#sport-links-mobile li a, #sustainability-links-mobile li a{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+    opacity: 0.7;
+    font-style: normal;
+    font-size: 1rem;
+
+}
+#company-links-mobile li:hover a, #careers-links-mobile li:hover a, #innovation-links-mobile li:hover a,#sport-links-mobile li:hover a, #sustainability-links-mobile li:hover a{
+    opacity: 1;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
 @media only screen and (max-width: 1024px){
+
+    #navbar{
+
+    }
+    #medium-subnav{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 100vh;
+
+    }
+    .navbar_button{
+        font-size: 1.3rem;
+        width: 90%;
+        text-align: start;
+        border-bottom: 1px solid gray;
+        opacity: 1;
+        padding-bottom: 10px;
+        margin-left: 4%;
+    }
+    #overlay{
+        display: none;
+    }
+    #collapsable-links{
+        display: none;
+    }
+    .line-linear{
+        display: none;
+    }
+
     .article{
         flex-direction: column;
     }
@@ -640,6 +720,16 @@ topic-picture-description{
     }
     .footbal-text{
         top: 29%;
+    }
+    .country-container{
+        display: none;
+    }
+    .search-container p{
+        display: none;
+    }
+    .search-button svg{
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -660,10 +750,17 @@ topic-picture-description{
         max-width: 100%;
         margin-bottom: 5%;
     }
+
 }
 
 @media only screen and (max-width: 479px){
-    .footbal-image{
-
+    .social-footer svg{
+        width: 30px;
+        height: 30px;
+    }
+    .social-footer{
+       justify-content: normal;
+        gap: 10%;
+        margin-left: 40%;
     }
 }
