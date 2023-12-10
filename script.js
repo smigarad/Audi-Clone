@@ -1,19 +1,20 @@
-function toogleContent(contentID){
+function toogleContent(contentID) {
     var allContent = document.getElementsByClassName("links");
-    var overlay  = document.getElementById("overlay");
+    var overlay = document.getElementById("overlay");
     var collabsable_links = document.getElementById("collapsable-links");
-    for(var i = 0; i < allContent.length; i++){
-        if(allContent[i].id === contentID){
-            if(allContent[i].style.display === "none" || allContent[i].style.display === ""){
+
+    for (var i = 0; i < allContent.length; i++) {
+        if (allContent[i].id === contentID) {
+            if (allContent[i].style.display === "none" || allContent[i].style.display === "") {
                 allContent[i].style.display = "flex";
                 overlay.style.display = "block";
                 collabsable_links.style.borderTop = "1px solid black";
-            //     make it black
-
+                collabsable_links.style.display = "block"; // Show collabsable_links
             } else {
                 allContent[i].style.display = "none";
                 overlay.style.display = "none";
                 collabsable_links.style.borderTop = "none";
+                collabsable_links.style.display = "none"; // Hide collabsable_links
             }
         } else {
             allContent[i].style.display = "none";
@@ -21,15 +22,18 @@ function toogleContent(contentID){
     }
 }
 
+
 function closeContent(){
     var allContent = document.getElementsByClassName("links");
     var overlay  = document.getElementById("overlay");
     var subnav = document.getElementById("medium-subnav");
+    var collapsable_links = document.getElementById('collapsable-links');
     for(var i = 0; i < allContent.length; i++){
         allContent[i].style.display = "none";
     }
     overlay.style.display = "none";
     subnav.style.display = "none";
+
 }
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -38,24 +42,24 @@ document.addEventListener("DOMContentLoaded", function(){
 }
 );
 
-function toogleSubnavMedium(){
+function toogleSubnavMedium(contentID){
     var subnav = document.getElementById("medium-subnav");
     var navbar_buttons = subnav.getElementsByClassName("navbar_button");
     var overlay = document.getElementById("overlay");
+    var collabsable_links = document.getElementById("collapsable-links");
     if(subnav.style.display === "none" || subnav.style.display === ""){
         subnav.style.display = "flex";
         subnav.style.borderTop = "1px solid black";
         overlay.style.display = "block";
-        console.log(navbar_buttons.length);
         for(var i = 0; i < navbar_buttons.length; i++){
             navbar_buttons[i].style.display = "block";
-            console.log("block");
         }
 
     } else {
         subnav.style.display = "none";
         subnav.style.borderTop = "none";
         overlay.style.display = "none";
+        collabsable_links.style.display = 'none';
         for(var i = 0; i < navbar_buttons.length; i++){
             navbar_buttons[i].style.display = "none";
         }
@@ -70,7 +74,6 @@ function toogleContentMobile(contentID){
         if(mobile_subnavs[i].id === contentID){
             if(mobile_subnavs[i].style.display === "none" || mobile_subnavs[i].style.display === ""){
                 mobile_subnavs[i].style.display = "block";
-                links.style.borderTop = "1px solid black";
             } else {
                 mobile_subnavs[i].style.display = "none";
                 links.style.borderTop = "none";
@@ -81,14 +84,13 @@ function toogleContentMobile(contentID){
     }
 
 }
-window.addEventListener("resize", function(){
+
+function setButtons(){
     var company_button = document.getElementById("company-button");
-    console.log(company_button);
     var innovation_button = document.getElementById("innovation-button");
     var sustainability_button = document.getElementById("sustainability-button");
     var careers_button = document.getElementById("careers-button");
     var sport_button = document.getElementById("sport-button");
-    console.log(window.innerWidth);
 
     var mobile_subnavs = document.getElementsByClassName("mobile-subnav");
     var links = document.getElementsByClassName("links");
@@ -115,7 +117,25 @@ window.addEventListener("resize", function(){
         for(var i = 0; i < links.length; i++){
             links[i].style.borderTop = "none";
         }
+
+        var collapsable_links = document.getElementById('collapsable-links');
+        collapsable_links.style.display = 'none';
         subnav.style.display = "none";
         overlay.style.display = "none";
     }
-});
+}
+
+var loaded = false;
+window.addEventListener("resize", setButtons);
+window.onload = function (){
+
+    console.log('buttons called');
+    console.log(loaded);
+    if (loaded === true){
+        var collapsable_links = document.getElementById('collapsable-links');
+        collapsable_links.style.display = 'none';
+        console.log('true');
+    }
+    loaded = true;
+    setButtons();
+}

@@ -1,15 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Audi</title>
+    <title>Models</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+
+    <link rel="stylesheet" href="style.css"> <!-- Your custom styles -->
+    <link rel="stylesheet" href="models.css"> <!-- Additional custom styles -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>-->
+    <script src="models.js"></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
-<script src="script.js"></script>
 <nav id="navbar">
     <div class="inner_navbar_content">
         <div class="navbar-normal">
@@ -69,10 +79,10 @@
 
     <div id="medium-collabsable-links">
         <div id="medium-subnav">
-            <button class="navbar_button" id = "company-button" onclick="toogleContent('company-links')">Company
+            <button class="navbar_button" id="company-button" onclick="toogleContent('company-links')">Company
                 <div class="line-linear"></div>
             </button>
-            <ul id  = "company-links-mobile" class ="mobile-subnav">
+            <ul id="company-links-mobile" class="mobile-subnav">
                 <li>
                     <a href="https://www.audi.com/en/company.html">Company</a>
                     <div class="line-linear"></div>
@@ -101,10 +111,10 @@
                     <div class="line-linear"></div>
                 </li>
             </ul>
-            <button class="navbar_button" id = "innovation-button" onclick="toogleContent('innovation-links')">Innovation
+            <button class="navbar_button" id="innovation-button" onclick="toogleContent('innovation-links')">Innovation
                 <div class="line-linear"></div>
             </button>
-            <ul class = "mobile-subnav" id = "innovation-links-mobile">
+            <ul class="mobile-subnav" id="innovation-links-mobile">
                 <li>
                     <a href="https://www.audi.com/en/innovation.html">Innovation</a>
                     <div class="line-linear"></div>
@@ -126,20 +136,23 @@
                     <div class="line-linear"></div>
                 </li>
             </ul>
-            <button class="navbar_button" id = "sustainability-button" onclick="toogleContent('sustainability-links')">Sustainability
+            <button class="navbar_button" id="sustainability-button" onclick="toogleContent('sustainability-links')">
+                Sustainability
                 <div class="line-linear"></div>
             </button>
-            <ul class = "mobile-subnav" id = "sustainability-links-mobile">
+            <ul class="mobile-subnav" id="sustainability-links-mobile">
                 <li>
                     <a href="https://www.audi.com/en/sustainablility.html">Sustainability</a>
                     <div class="line-linear"></div>
                 </li>
                 <li>
-                    <a href="https://www.audi.com/en/sustainablility/sustainablity-concept.html">Sustainability concept</a>
+                    <a href="https://www.audi.com/en/sustainablility/sustainablity-concept.html">Sustainability
+                        concept</a>
                     <div class="line-linear"></div>
                 </li>
                 <li>
-                    <a href="https://www.audi.com/en/sustainablility/environment-resources.html">Environment resources</a>
+                    <a href="https://www.audi.com/en/sustainablility/environment-resources.html">Environment
+                        resources</a>
                     <div class="line-linear"></div>
                 </li>
                 <li>
@@ -151,10 +164,10 @@
                     <div class="line-linear"></div>
                 </li>
             </ul>
-            <button class="navbar_button" id = "careers-button" onclick="toogleContent('careers-links')">Careers
+            <button class="navbar_button" id="careers-button" onclick="toogleContent('careers-links')">Careers
                 <div class="line-linear"></div>
             </button>
-            <ul class = "mobile-subnav" id = "careers-links-mobile">
+            <ul class="mobile-subnav" id="careers-links-mobile">
                 <li>
                     <a href="https://www.audi.com/en/careers.html">Overview</a>
                     <div class="line-linear"></div>
@@ -186,24 +199,24 @@
                     <div class="line-linear"></div>
                 </li>
             </ul>
-            <button class="navbar_button" id = "sport-button" onclick="toogleContent('sport-links')">Audi in sport
+            <button class="navbar_button" id="sport-button" onclick="toogleContent('sport-links')">Audi in sport
                 <div class="line-linear"></div>
             </button>
-                <ul class = "mobile-subnav" id = "sport-links-mobile">
-                    <li>
-                        <a href="https://www.audi.com/en/careers.html">Overview</a>
-                        <div class="line-linear"></div>
-                    </li>
-                    <li>
-                        <a href="https://karriere.audi.de/sap/bc/bsp/sap/z_hcmx_ui_ext/desktop.html#/SEARCH/SIMPLE/?pid=bc:jobportal22_EN:audi.com:karriere.audi:navigation:y:jobportal">Vorsprung
-                            durch Motorsport</a>
-                        <div class="line-linear"></div>
-                    </li>
-                    <li>
-                        <a href="https://www.audi.com/en/careers/working-at-audi.html">Footbal partnership</a>
-                        <div class="line-linear"></div>
-                    </li>
-                </ul>
+            <ul class="mobile-subnav" id="sport-links-mobile">
+                <li>
+                    <a href="https://www.audi.com/en/careers.html">Overview</a>
+                    <div class="line-linear"></div>
+                </li>
+                <li>
+                    <a href="https://karriere.audi.de/sap/bc/bsp/sap/z_hcmx_ui_ext/desktop.html#/SEARCH/SIMPLE/?pid=bc:jobportal22_EN:audi.com:karriere.audi:navigation:y:jobportal">Vorsprung
+                        durch Motorsport</a>
+                    <div class="line-linear"></div>
+                </li>
+                <li>
+                    <a href="https://www.audi.com/en/careers/working-at-audi.html">Footbal partnership</a>
+                    <div class="line-linear"></div>
+                </li>
+            </ul>
         </div>
 
     </div>
@@ -338,226 +351,131 @@
 
 <div id="overlay"></div>
 <div id="main-container">
-
-    <div class="footbal-container">
-        <div class="image-container">
-            <img class="footbal-image" src="resources/images/fc_bayern.jpg" alt="footbal">
-        </div>
-        <div class="footbal-text">
-            <h1>Audi & FC Bayern in Kopenhagen</h1>
-            <h3>Join our team as they take the Audi RS e-tron GT FC Bayern concept* for a spin</h3>
-            <a class="footbal-button"
-               href="https://www.audi.com/en/careers/working-at-audi/audi-spirit/women-in-tech.html">Read more</a>
-        </div>
-        <div class="footbal-description">
-            <h3 class="footbal-description-h3">Join our team as they take the Audi RS e-tron GT FC Bayern concept* for a
-                spin</h3>
-            <a class="footbal-button"
-               href="https://www.audi.com/en/careers/working-at-audi/audi-spirit/women-in-tech.html">Read more</a>
-            <div class="footbal-spans">
-                <span>Audi RS e-tron GT FC Bayern concept: </span>
-                <span>Power consumption (combined*) in kWh/100 km: 20.2–19.3 (NEDC) | 22.6–20.6 (WLTP)</span>
-                <span>CO₂ emissions (combined*) in g/km: 0</span>
-            </div>
-            </br>
-            <span>Information on fuel/power consumption and CO₂ emissions with ranges depending on the selected equipment of the vehicle.</span>
-        </div>
-    </div>
-
-    <div class="space-div"></div>
     <div class="headline-centered-div">
-        <h2>Current topics from the world of Audi </h2>
+        <h2>Favourite models</h2>
     </div>
-
-    <div class="topics-container">
-        <div class="topic">
-            <a href="https://www.audi.com/en/sustainablility/people-society/corporate-citizenship/audi-one-young-world-summit-2023.html">
-                <div class="topic-image-container">
-                    <img class="topic-image" src="resources/images/topic1.jpg" alt="topic1">
-                </div>
-                <div class="topic-text">
-                    <div class="topic-picture-description">
-                        <span>Audi in Footbal</span>
-                        <span>10/03/2023</span>
+    <div id="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="resources/images/carousel1.jpeg" alt="Audi A4 Avant">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Audi A4 Avant</h5>
+                        <p>925 575 CZK</p>
                     </div>
-                    <h3>One Young World: Audi’s contribution to the future</h3>
-                    <p>The One Young World Summit will bring young people together in Belfast from October 2 to 5 to
-                        find
-                        solutions to the great challenges of our time. Among them are representatives from Audi,
-                        Bentley, Elli, and the Audi Environmental Foundation. </p>
                 </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="resources/images/carousel2.jpg" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Audi A5 Sportback</h5>
+                        <p>1 013 140 CZK</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="resources/images/carousel3.jpg" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Audi Q8 SUV</h5>
+                        <p>To be announced</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
             </a>
-        </div>
-
-        <div class="topic">
-            <a href="https://www.audi.com/en/sport/football/audi-and-fc-bayern/a-way-to-inspire.html">
-                <div class="topic-image-container">
-                    <img class="topic-image" src="resources/images/topic2.jpg" alt="topic1">
-                </div>
-
-                <div class="topic-picture-description">
-                    <span>Audi in Footbal</span>
-                    <span>10/03/2023</span>
-                </div>
-                <div class="topic-text">
-                    <h3>A way to inspire — Audi & FC Bayern take Copenhagen</h3>
-                    <p>Join our team as they take the Audi RS e-tron GT FC Bayern concept*
-                        for a spin and explore Copenhagen while they gear up for the FC Bayern
-                        match against FC Copenhagen at Parken Stadium.</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="topic">
-            <a href="https://www.audi.com/en/sustainablility/environment-resources/decarbonization/audi-journey-toward-more-sustainable-production.html">
-                <div class="topic-image-container">
-                    <img class="topic-image" src="resources/images/topic3.jpg" alt="topic1">
-                </div>
-                <div class="topic-picture-description">
-                    <span>Audi in Footbal</span>
-                    <span>10/03/2023</span>
-                </div>
-                <div class="topic-text">
-                    <h3>Not a matter of location: sustainability at Audi</h3>
-                    <p>Audi plans to continue working on the gradual implementation
-                        of the most extensive possible circular economy and sustainable
-                        production by 2030.</p>
-                </div>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
             </a>
         </div>
     </div>
 
-    <div class="space-div"></div>
-
-    <div class="article_container">
-        <div class="article">
-            <div class="article-text">
-                <h3>Full electric speed ahead</h3>
-                <p>Audi recently underpinned its clear course toward electromobility with strong figures and important
-                    milestones.
-                    How the Four Rings are progressing on their path to successful electrification.</p>
-                <div class="article-button">
-                    <a href="https://www.progress.audi/progress/en/e-tron-range.html">Read more</a>
-                </div>
-                <p class="article-footer">
-                    <span>Audi Q8 Sportback e-tron: </span>
-                    <span>Power consumption (combined*) in kWh/100 km: 24.1–19.5</span>
-                    <span>CO₂ emissions (combined*) in g/km: 0</span>
-                    </br>
-                    <span>Information on fuel/power consumption and CO₂ emissions with ranges depending on the selected equipment of the vehicle.</span>
-                    <br>
-                    <span>Only consumption and emission values according to WLTP and not according to NEDC are available for the vehicle.</span>
-                </p>
-            </div>
-            <img class="article-picture" src="resources/images/article0.jpg">
-        </div>
-
-        <div class="space-div"></div>
-        <div class="space-div"></div>
-        <div class="article">
-            <img class="article-picture" src="resources/images/article.jpeg">
-            <div class="article-text">
-                <h3>#WorkingInProgress</h3>
-                <p>Help us to design the mobility of tomorrow. With cars that use state-of-the-art technology to offer
-                    an awesome driving experience and, at the same time, pave the way into a future that is digital,
-                    sustainable and electric.</p>
-                <div class="article-button">
-                    <a href="https://www.audi.com/en/careers.html">Read more</a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="space-div"></div>
-    <div class="space-div"></div>
     <div class="headline-centered-div">
-        <h2>Press releases </h2>
+        <h2>Gallery</h2>
     </div>
-    <div class="topics-container">
-        <div class="topic">
-            <a href="https://www.audi-mediacenter.com/en/press-releases/audi-begins-production-of-electric-motors-for-the-ppe-in-gyor-15690">
-                <div class="topic-image-container">
-                    <img class="topic-image" src="resources/images/topic4.jpg" alt="topic4">
-                </div>
-                <div class="topic-text">
-                    <div class="topic-picture-description">
-                        <span>Audi MediaCenter</span>
-                        <span>11/07/2023</span>
+    <div id="lightbox">
+        <div class="row mb-3">
+            <div class="col-sm-4 ">
+                <a href="resources/images/a1.jpg" data-toggle="lightbox" data-gallery="example-gallery">
+                    <div class="position-relative">
+                        <img src="resources/images/a1.jpg" class="img-fluid">
+                        <div class="image-text">Audi A1</div>
                     </div>
-                    <h3>Audi begins production of electric motors for the PPE in Győr</h3>
-                    <p>To the press release. </p>
-                </div>
-            </a>
-        </div>
-
-        <div class="topic">
-            <a href="https://www.audi-mediacenter.com/en/press-releases/audi-sports-ultimate-meeting-of-electrified-prototypes-e-tron-on-track-15679">
-                <div class="topic-image-container">
-                    <img class="topic-image" src="resources/images/topic5.jpg" alt="topic5">
-                </div>
-
-                <div class="topic-picture-description">
-                    <span>Audi MediaCenter</span>
-                    <span>10/30/2023</span>
-                </div>
-                <div class="topic-text">
-                    <h3>Audi begins production of electric motors for the PPE in Győr</h3>
-                    <p>To the press release</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="topic">
-            <a href="https://www.audi-mediacenter.com/en/press-releases/audi-group-solid-development-in-the-first-nine-months-15677?pk_campaign=newsletter-15677-2023-10-27&pk_content=primary-btn&pk_medium=ad-hoc&pk_source=newsletter">
-                <div class="topic-image-container">
-                    <img class="topic-image" src="resources/images/topic6.jpg" alt="topic6">
-                </div>
-                <div class="topic-picture-description">
-                    <span>Audi MediaCenter</span>
-                    <span>10/27/2023</span>
-                </div>
-                <div class="topic-text">
-                    <h3>Audi Group: Solid development in the first nine months</h3>
-                    <p>To the press release</p>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="space-div"></div>
-    <div class="audi-center-button">
-        <a href="https://www.audi-mediacenter.com/en">To the Audi MediaCenter</a>
-    </div>
-
-    <div class="space-div"></div>
-    <div class="article_container">
-        <div class="article">
-            <img class="article-picture" src="resources/images/article2.jpg">
-            <div class="article-text">
-                <h3>At Audi you’ll find the right vehicle for every requirement</h3>
-                <p>Sporty, luxurious, or compact – at Audi you will find the right vehicle for every requirement.
-                    Discover and configure our series models now.</p>
-                <div class="article-button">
-                    <a href="https://www.audi.cz/?pid=bc:all-models_CZ:audi.com:p~country_switch:n:o:ai~models">
-                        Discover all models
-                    </a>
-                </div>
-                <p class="article-footer">
-                    <span>Audi Q4 e-tron: </span>
-                    <span>Power consumption (combined*) in kWh/100 km: 20.1–16.6</span>
-                    <span>CO₂ emissions (combined*) in g/km: 0</span>
-                    </br>
-                    <span>Information on fuel/power consumption and CO₂ emissions with ranges depending on the selected equipment of the vehicle.</span>
-                    <br>
-                    <span>Only consumption and emission values according to WLTP and not according to NEDC are available for the vehicle.</span>
-                </p>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="resources/images/a3.jpg" data-toggle="lightbox" data-gallery="example-gallery">
+                    <div class="position-relative">
+                        <img src="resources/images/a3.jpg" class="img-fluid">
+                        <div class="image-text">Audi A3</div>
+                    </div>
+                </a>
             </div>
 
+            <a href="resources/images/a4.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+               class="col-sm-4">
+                <div class="position-relative">
+                    <img src="resources/images/a4.jpg" class="img-fluid">
+                    <div class="image-text">Audi A4</div>
+                </div>
+            </a>
         </div>
-        <div class="space-div"></div>
+        <div class="row mb-3">
+            <a href="resources/images/a5.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+               class="col-sm-4">
+                <div class="position-relative">
+                    <img src="resources/images/a5.jpg" class="img-fluid">
+                    <div class="image-text">Audi A5</div>
+                </div>
+            </a>
+            <a href="resources/images/a5c.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+               class="col-sm-4">
+                <div class="position-relative">
+                    <img src="resources/images/a5c.jpg" class="img-fluid">
+                    <div class="image-text">Audi A5 Cabriolet</div>
+                </div>
+            </a>
+            <a href="resources/images/a6.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+               class="col-sm-4">
+                <div class="position-relative">
+                    <img src="resources/images/a6.jpg" class="img-fluid">
+                    <div class="image-text">Audi A6</div>
+                </div>
+            </a>
+        </div>
+
+        <div class="row mb-3">
+            <a href="resources/images/a7.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+               class="col-sm-4">
+                <div class="position-relative">
+                    <img src="resources/images/a7.jpg" class="img-fluid">
+                    <div class="image-text">Audi A3</div>
+                </div>
+            </a>
+            <a href="resources/images/a8.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+               class="col-sm-4">
+                <div class="position-relative">
+                    <img src="resources/images/a8.jpg" class="img-fluid">
+                    <div class="image-text">Audi A8</div>
+                </div>
+            </a>
+            <a href="resources/images/q2.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+               class="col-sm-4">
+                <div class="position-relative">
+                    <img src="resources/images/q2.jpg" class="img-fluid">
+                    <div class="image-text">Audi Q2</div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
+
+
 <footer class="footer">
     <div class="footer-center">
         <div class="social-footer">
@@ -568,7 +486,7 @@
                 </svg>
             </a>
 
-            <a href = "https://www.instagram.com/audiofficial/">
+            <a href="https://www.instagram.com/audiofficial/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
                      class="bi bi-instagram" viewBox="0 0 16 16">
                     <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
@@ -581,7 +499,7 @@
                 </svg>
             </a>
 
-            <a href = "https://www.youtube.com/audi">
+            <a href="https://www.youtube.com/audi">
                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-youtube"
                      viewBox="0 0 16 16">
                     <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
@@ -666,7 +584,8 @@
                     <a href="https://www.audi.com/en/legal.html">Legal</a>
                 </li>
                 <li>
-                    <a href="https://www.audi.com/en/company/compliance-riskmanagement/whistleblower-system.html">Whistleblower System</a>
+                    <a href="https://www.audi.com/en/company/compliance-riskmanagement/whistleblower-system.html">Whistleblower
+                        System</a>
                 </li>
                 <li>
                     <a href=""> Privacy Policy</a>

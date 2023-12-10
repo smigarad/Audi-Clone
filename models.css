@@ -1,0 +1,35 @@
+h2{
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+#carousel{
+    margin: 2% auto;
+    max-width: 1446px;
+}
+
+#lightbox{
+    margin: 2% auto;
+    max-width: 1446px;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px;
+    display: none;
+}
+
+.col-sm-4:hover .image-text {
+    display: block;
+}
