@@ -1,3 +1,5 @@
-# Audi clone webpage.
-*  A project made for the VSB course VIA focusing css, html and basic JS functionality.
-*  There are 3 web pages, the index.html is the main page, then the other two are for contacts and car gallery.
+# Audi clone webpage
+* A static webpage that is a clone of the Audi webpage.
+*  The project consists of 3 webpages: Home, Models, and Contact.
+* The project is built using HTML, CSS, and JavaScript.
+* The project is responsive and can be viewed on different devices.
